@@ -23,12 +23,13 @@ while (True):
  data=(f"link={linkfb}")
  get=requests.post("https://id.traodoisub.com/api.php",headers=head,data=data).text
  a=get.find("error")
+ sleep(2)
+ check=requests.post("https://id.traodoisub.com/api.php",headers=head,data=data)
  if a>=0:
-  sleep(2)
-  check=requests.post("https://id.traodoisub.com/api.php",headers=head,data=data).json()['error']
-  print("error:",check)
+  checkerror=check.json()['error']
+  print("error:",checkerror)
   break
  else:
   sleep(2)
-  id=requests.post("https://id.traodoisub.com/api.php",headers=head,data=data).json()['id']
+  id=check.json()['id']
   print("Id của Bạn Là:",id)
