@@ -13,5 +13,5 @@ termux-setup-storage && apt update && apt upgrade && pkg install php && pkg inst
 ```
 ## Lệnh vào Tool
 ```
-git clone https://github.com/khoatran06/tool ; cd tool ; python getid.py
+git clone https://github.com/khoatran06 ; cd tool ; python getid.py
 ```
